@@ -96,7 +96,7 @@ export default function App() {
 
         <div className="chart">
           <ResponsiveContainer width="100%" height={380}>
-            <LineChart data={series}>
+            <LineChart data={series} margin={{ top: 20, right: 20, left: 10, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="time" minTickGap={60}
                 tickFormatter={t => String(t).slice(5, 16).replace('T', ' ')} />
@@ -113,7 +113,7 @@ export default function App() {
         <p>How wrong forecasts are depending on how many hours ahead they were published.</p>
         <div className="chart">
           <ResponsiveContainer width="100%" height={300}>
-            <BarChart data={byHorizon}>
+            <BarChart data={byHorizon} margin={{ top: 20, right: 20, left: 10, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" />
               <XAxis dataKey="horizon" unit="h" />
               <YAxis unit=" MW" width={80} />
